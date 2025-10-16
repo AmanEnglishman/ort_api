@@ -4,11 +4,7 @@ services:
   web:
     build: .
     container_name: ort_web
-    env_file:
-      - .env
     command: /entrypoint.sh
-    ports:
-      - "8000:8000"
     volumes:
       - static_volume:/app/staticfiles
       - media_volume:/app/media
