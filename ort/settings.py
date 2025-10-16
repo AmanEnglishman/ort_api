@@ -180,3 +180,5 @@ CSRF_TRUSTED_ORIGINS = [
     'http://localhost:1111',
     'http://127.0.0.1:1111',
 ]
+AUTH_USER_MODEL = 'users.User'
+
