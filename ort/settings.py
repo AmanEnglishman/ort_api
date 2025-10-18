@@ -29,6 +29,7 @@ ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     '188.255.45.194',
+    
 ]
 
 
@@ -184,3 +185,62 @@ CSRF_TRUSTED_ORIGINS = [
 ]
 AUTH_USER_MODEL = 'users.User'
 
+
+JAZZMIN_SETTINGS = {
+    # General
+    'site_header': 'ORTECH',
+    'site_brand': 'ORTECH',
+    'welcome_sign': 'Добро пожаловать в ORTECH',
+    'copyright': 'ORTECH 2025',
+    'site_title': 'ORTECH Admin',
+    
+    # UI
+    'theme': 'flatly',  # flatly, simplex, united, darkly, cosmo, lumen, paper, sandstone, superhero, yeti
+    'color_theme': 'default',  # default, primary, success, info, warning, danger
+    
+    # Layout
+    'show_sidebar': True,
+    'navigation_expanded': True,
+    'hide_apps': [],
+    'hide_models': [],
+    
+    # Custom links
+    'custom_links': {
+        'users': [{
+            'name': 'API Documentation',
+            'url': '/api/swagger/',
+            'icon': 'fas fa-book',
+            'new_window': True,
+        }]
+    },
+    
+    # Icons
+    'icons': {
+        'auth': 'fas fa-users-cog',
+        'auth.user': 'fas fa-user',
+        'auth.group': 'fas fa-users',
+        'users': 'fas fa-user-friends',
+        'users.user': 'fas fa-user',
+    },
+    
+    # Related modal
+    'related_modal_active': True,
+    
+    # Custom CSS/JS
+    'custom_css': None,
+    'custom_js': None,
+    
+    # Use modals instead of popups
+    'use_google_fonts_css': True,
+    'show_ui_builder': False,
+    
+    # Change view
+    'changeform_format': 'horizontal_tabs',
+    'changeform_format_overrides': {
+        'auth.user': 'collapsible',
+        'auth.group': 'vertical_tabs',
+    },
+    
+    # Ordering
+    'order_with_respect_to': ['auth', 'users'],
+}
